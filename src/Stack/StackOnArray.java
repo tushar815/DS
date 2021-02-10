@@ -41,6 +41,12 @@ public class StackOnArray<E> {
 
     }
 
+    public void popRecursively(){
+        if(isEmpty())return;
+        pop();
+        popRecursively();
+    }
+
 
     public static void main(String[] args) {
         StackOnArray<Integer> s = new StackOnArray<Integer>(4);
